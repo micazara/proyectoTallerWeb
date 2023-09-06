@@ -19,7 +19,7 @@ public class ControladorLogin {
     private ServicioLogin servicioLogin;
 
     @Autowired
-    public ControladorLogin(ServicioLogin servicioLogin){
+    public ControladorLogin(ServicioLogin servicioLogin) {
         this.servicioLogin = servicioLogin;
     }
 
@@ -27,7 +27,14 @@ public class ControladorLogin {
     public ModelAndView irALogin() {
 
         ModelMap modelo = new ModelMap();
+        // el modelo es un mapa
+        // el valor es un objeto vacio
         modelo.put("datosLogin", new DatosLogin());
+        // esta linea devuelve una vista con los datos. viewname es el nombre de la vistsa q quiero retornar
+        // modelo: set de datos que puede ser representado con una clase linkeado con la vista. Sirve para guardar los datos deseados.
+        // Los datos que ingresan por la vista se guardan en el modelo para analizar, validar, etc.
+        // El modelo es una instancia de una clase con los datos deseados.
+        // Cuando el usuario guarda datos se van guardando en DatosLogin
         return new ModelAndView("login", modelo);
     }
 
@@ -48,12 +55,12 @@ public class ControladorLogin {
     @RequestMapping(path = "/registrarme", method = RequestMethod.POST)
     public ModelAndView registrarme(@ModelAttribute("usuario") Usuario usuario) {
         ModelMap model = new ModelMap();
-        try{
+        try {
             servicioLogin.registrar(usuario);
-        } catch (UsuarioExistente e){
+        } catch (UsuarioExistente e) {
             model.put("error", "El usuario ya existe");
             return new ModelAndView("nuevo-usuario", model);
-        } catch (Exception e){
+        } catch (Exception e) {
             model.put("error", "Error al registrar el nuevo usuario");
             return new ModelAndView("nuevo-usuario", model);
         }
@@ -72,10 +79,12 @@ public class ControladorLogin {
         return new ModelAndView("home");
     }
 
+    // acá es donde empieza la app: localhost:8080/spring. Esta es la raiz, no se especifica una pag en particular para navegar.
     @RequestMapping(path = "/", method = RequestMethod.GET)
     public ModelAndView inicio() {
         return new ModelAndView("redirect:/login");
     }
+    // "/" es la raiz
 
     @RequestMapping("/prueba")
     public ModelAndView irAPrueba() {
