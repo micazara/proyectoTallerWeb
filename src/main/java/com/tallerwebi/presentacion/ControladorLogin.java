@@ -77,6 +77,7 @@ public class ControladorLogin {
     @RequestMapping(path = "/home", method = RequestMethod.GET)
     public ModelAndView irAHome() {
         return new ModelAndView("home");
+
     }
 
     // acá es donde empieza la app: localhost:8080/spring. Esta es la raiz, no se especifica una pag en particular para navegar.
@@ -95,10 +96,16 @@ public class ControladorLogin {
 
     @RequestMapping("/prueba2")
     public ModelAndView irAPrueba2() {
-
         ModelMap modelo = new ModelMap();
-        modelo.put("nombre", "mica");
         return new ModelAndView("prueba2", modelo);
+
     }
+
+    @RequestMapping("/probando-urls")
+    public ModelAndView irAProbandoUrls() {
+        ModelMap modelo = new ModelMap();
+        return new ModelAndView("probando-urls", modelo);
+    }
+
 }
 

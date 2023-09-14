@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<main>
+    <form action="#" th:action="@{/mostrarArticulo}" method="POST" th:object="${articulo}">
+        <input th:field="*{cod}" type="number">
+        <input th:field="*{descripcion}" type="text">
+    </form>
+</main>
+
+</body>
+</html>
