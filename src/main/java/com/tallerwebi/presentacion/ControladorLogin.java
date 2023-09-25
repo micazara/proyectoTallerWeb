@@ -5,6 +5,7 @@ import com.tallerwebi.dominio.Usuario;
 import com.tallerwebi.dominio.excepcion.UsuarioExistente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -105,6 +106,12 @@ public class ControladorLogin {
     public ModelAndView irAProbandoUrls() {
         ModelMap modelo = new ModelMap();
         return new ModelAndView("probando-urls", modelo);
+    }
+
+    @RequestMapping("/probando-urls/home")
+    public ModelAndView volverAlHomeDesdeProbandoUrls() {
+        ModelMap modelo = new ModelMap();
+        return new ModelAndView("home", modelo);
     }
 
 }

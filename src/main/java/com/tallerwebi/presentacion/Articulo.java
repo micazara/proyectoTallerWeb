@@ -4,6 +4,10 @@ public class Articulo {
     public Integer cod;
     public String descripcion;
 
+    public Articulo(){
+
+    }
+
     public Articulo(Integer cod, String descripcion){
         this.cod=cod;
         this.descripcion=descripcion;

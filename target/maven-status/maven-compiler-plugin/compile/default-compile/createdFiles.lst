@@ -8,6 +8,7 @@ com\tallerwebi\dominio\excepcion\UsuarioExistente.class
 com\tallerwebi\presentacion\DatosArticulo.class
 com\tallerwebi\config\SpringWebConfig.class
 com\tallerwebi\config\HibernateConfig.class
+com\tallerwebi\presentacion\ControladorCalculadora.class
 com\tallerwebi\presentacion\ControladorLogin.class
 com\tallerwebi\dominio\RepositorioUsuario.class
 com\tallerwebi\presentacion\Articulo.class
