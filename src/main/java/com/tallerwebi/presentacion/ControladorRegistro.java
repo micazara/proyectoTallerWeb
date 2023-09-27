@@ -1,11 +1,13 @@
 package com.tallerwebi.presentacion;
 
 import com.tallerwebi.dominio.Usuario;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+@Controller
 public class ControladorRegistro {
     public ModelAndView registrar(String email) {
         ModelMap modelo = new ModelMap();
@@ -51,5 +53,9 @@ public class ControladorRegistro {
         return contieneMayusculas;
     }
 
+    @RequestMapping(path = "/nuevo-usuario")
+    public ModelAndView nuevoUsuario() {
+        return new ModelAndView("nuevo-usuario");
+    }
 
 }

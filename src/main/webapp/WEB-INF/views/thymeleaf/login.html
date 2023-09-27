@@ -9,10 +9,8 @@
     <!-- Boostrap core css -->
 <!--    antes de mandar el html al server se debe resolver el th.-->
 <!--    datos de este html se van a completar con datos que vienen de java. th indica eso.-->
-    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.0/css/bootstrap.min.css}"/>
-
     <!-- custom style -->
-    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+    <link rel="stylesheet" th:href="@{/css/login.css}"/>
 
 </head>
 
@@ -24,27 +22,28 @@
 
 <main role="main" class="container">
 
-    <div class = "container">
-        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+    <h4></h4>
+
+    <div class = "contenedor_principal">
+        <div class="caja_de_login">
+            <div><h2>Ingresar</h2></div>
             <!--cuando el formulario se envie,se va a mandar al request mapping con la url /validar-login. linea 41
              con el controlador.-->
             <!--thaction va a parar al controlador-->
             <form action="#" th:action="@{/validar-login}" method="POST" th:object="${datosLogin}">
                 <!--object dice q modelo va a reicibir paraa llenar el form. Es el que está en el request mapping con url login. linea 26 en el controlador.-->
-                <h3 class="form-signin-heading">Taller Web I</h3>
-                <hr class="colorgraph"><br>
 
                 <!--set de email en este input. por eso tienen qe estar los getters y setters-->
-                <input th:field="*{email}" id="email" type="email" class="form-control" required/>
-                <input th:field="*{password}" type="password" id="password" class="form-control" required/>
+                <input th:field="*{email}" id="email" type="email" class="campos" required placeholder="E-mail"/>
+                <input th:field="*{password}" type="password" id="password" class="campos" required placeholder="Contraseña"/>
 
-                <button id="btn-login" class="btn btn-lg btn-primary btn-block" Type="Submit">Login</button>
+                <button class="boton_ingresar" Type="Submit">Ingresar</button>
 
                 <!--se muestra si se cumple la condicion. s va a mostrar thtext. el error lo saca del controlador-->
-                <p th:if="${error != null}" class="alert alert-danger" th:text="'Error ' + ${error}">
+                <p th:if="${error != null}" class="mensaje_error" th:text="'Error ' + ${error}">
                 </p>
             </form>
-            <a id="ir-a-registrarme" href="nuevo-usuario">Registrarme</a>
+            <a href="src/main/webapp/WEB-INF/views/thymeleaf/home.html">Volver</a>
         </div>
     </div>
 </main>
