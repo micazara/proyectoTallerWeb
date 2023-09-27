@@ -84,7 +84,7 @@ public class ControladorLogin {
     // acá es donde empieza la app: localhost:8080/spring. Esta es la raiz, no se especifica una pag en particular para navegar.
     @RequestMapping(path = "/", method = RequestMethod.GET)
     public ModelAndView inicio() {
-        return new ModelAndView("redirect:/login");
+        return new ModelAndView("redirect:/home");
     }
     // "/" es la raiz
 
