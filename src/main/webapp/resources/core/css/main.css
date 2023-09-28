@@ -12,7 +12,8 @@ body {
     width:100%;
     margin: 0;
     font-family: 'Nunito', sans-serif;
-    // background-image:url("resources/img/fondo-home.png");
+    background-image: url("../img/fondo-home.png");
+    /*background-color:#F89C9C;*/
 }
 main{
     margin:auto;
