@@ -6,6 +6,7 @@
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/thymeleaf/darDeAltaArticulo.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/thymeleaf" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/thymeleaf/home.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/thymeleaf" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/thymeleaf/homeLogueado.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/thymeleaf" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/thymeleaf/inicio.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/thymeleaf" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/thymeleaf/login.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/thymeleaf" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/resources/core/css" value="file://$PROJECT_DIR$/src/main/webapp" />
       </map>
