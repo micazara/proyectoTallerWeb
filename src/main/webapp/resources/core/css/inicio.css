@@ -9,43 +9,107 @@ celeste: 3ECFE3
 marron: 301919*/
 
 body {
-    width:100%;
+    width: 100%;
     margin: 0;
     font-family: 'Nunito', sans-serif;
     background-image: url("../img/fondo-home.png");
+    box-sizing: border-box;
     /*background-color:#F89C9C;*/
 }
-main{
-    margin:auto;
+
+.columnas {
+    display: grid;
+    grid-template-columns:1fr 1fr;
 }
 
-.encabezado{
-    background-color:#F89C9C;
-    display:flex;
+.encabezado {
+    background-color: #F89C9C;
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 1%;
 }
 
-.encabezado img{
-    border-radious:50%;
-    width:20%;
+.encabezado img {
+    border-radious: 50%;
+
 }
+
 h3 {
     color: #301919;
     font-family: 'Love Ya Like A Sister', cursive;
-    font-size:4.375em;
+    font-size: 4.375em;
+    margin: 1%;
+
 }
 
-.contenedor-accion-juego{
-    display:flex;
-    border: #F89C9C;
+.contenedor-accion-juego {
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    text-align: center;
 }
-.boton-batalla{
+
+.boton-batalla {
     background-color: #F89C9C;
-    color:white;
-    padding:2%;
-    border-radious:20%;
-    margin-top:2%;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 3%;
+    border-radious: 20%;
+    margin-top: 2%;
+}
+.boton-batalla:hover{
+    background-color: #f67e7e;
+transition:0.6s}
 
+.titulo {
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 20px;
+    text-align: center;
+}
+
+.caja-prov{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.caja-prov li{
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 10px;
+}
+.caja-prov li:hover{
+    color:#408059;
+}
+.frase{
+    margin-top: 5%;
+    font-size: 12px;
+    color: #301919;
+    text-align: center;
+    font-style: italic;
+}
+footer{
+    background-color: #3ECFE3;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    font-size: 10px;
+    align-content: center;
+    align-items: center;
+    /* margin-top: 2%; */
+    font-weight: 800;
+}
+
+footer p{
+    margin:2%;
 }
