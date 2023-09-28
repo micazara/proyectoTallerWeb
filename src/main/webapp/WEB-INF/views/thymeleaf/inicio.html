@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Patria en Juego--Home</title>
+  <!-- custom style -->
+  <link rel="stylesheet" th:href="@{/css/inicio.css}"/>
+    <!-- Boostrap core css -->
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.0/css/bootstrap.min.css}"/>
+
+</head>
+
+<body>
+<header class="encabezado">
+<h3>Patria en Juego</h3>
+  <img src="/resources/core/img/fondo-home.png" alt="perfilUser">
+</header>
+<main class="container">
+    <!-- USO th:text Para reemplazar el nombre
+    de la prov con el nombre de la que se está
+    jugando actualmente -->
+     <div class="contenedor-accion-juego">
+         <p>Actualmente estás recuperando</p>
+         <!-- th:text--FALTA LOG -->
+         <p th:text="${provinciaActual}">Tierra del Fuego</p>
+         <input type="button" value="¡Ir a la batalla!" class="boton-batalla">
+     </div>
+
+</main>
+<footer>
+
+</footer>
+</body>
+</html>
