@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
 
-
 /*
 rosita: F89C9C
 verde: 408059
@@ -12,7 +11,7 @@ body {
     width:100%;
     margin: 0;
     font-family: 'Nunito', sans-serif;
-    // background-image:url("resources/img/fondo-home.png");
+    background-image:url("/resources/img/fondo-home.png");
 }
 main{
     margin:auto;
