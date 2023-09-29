@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Taller Web I</title>
+    <title>Login</title>
 
     <!-- Boostrap core css -->
 <!--    antes de mandar el html al server se debe resolver el th.-->
@@ -16,35 +16,38 @@
 
 <body>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">UNLAM</a>
-</nav>
+<main>
 
-<main role="main" class="container">
 
-    <h4></h4>
 
     <div class = "contenedor_principal">
+        <h3>Patria en juego</h3>
         <div class="caja_de_login">
-            <div><h2>Ingresar</h2></div>
-            <!--cuando el formulario se envie,se va a mandar al request mapping con la url /validar-login. linea 41
-             con el controlador.-->
-            <!--thaction va a parar al controlador-->
+
+            <div class ="titulo_ingresar"><h2>Ingresar</h2></div>
             <form action="#" th:action="@{/validar-login}" method="POST" th:object="${datosLogin}">
                 <!--object dice q modelo va a reicibir paraa llenar el form. Es el que está en el request mapping con url login. linea 26 en el controlador.-->
-
+                <div class ="inputs">
                 <!--set de email en este input. por eso tienen qe estar los getters y setters-->
                 <input th:field="*{email}" id="email" type="email" class="campos" required placeholder="E-mail"/>
                 <input th:field="*{password}" type="password" id="password" class="campos" required placeholder="Contraseña"/>
 
-                <button class="boton_ingresar" Type="Submit">Ingresar</button>
+               </div>
 
+                <div>
+                    <button class="boton_ingresar" Type="Submit">Ingresar</button>
+                </div>
                 <!--se muestra si se cumple la condicion. s va a mostrar thtext. el error lo saca del controlador-->
                 <p th:if="${error != null}" class="mensaje_error" th:text="'Error ' + ${error}">
                 </p>
             </form>
-            <a href="src/main/webapp/WEB-INF/views/thymeleaf/home.html">Volver</a>
+
+
+
+
+
         </div>
+        <a href="src/main/webapp/WEB-INF/views/thymeleaf/home.html">Volver</a>
     </div>
 </main>
 <!-- /.container -->
