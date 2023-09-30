@@ -13,17 +13,12 @@
 
 <body>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand" href="#">UNLAM</a>
-</nav>
+<main>
 
-<main role="main" class="container">
-
-  <div class = "container">
-    <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-      <form action="#" th:action="@{/registrarme}" method="POST" th:object="${usuario}">
-        <h3 class="form-signin-heading">Nuevo Usuario</h3>
-        <hr class="colorgraph"><br>
+  <div class = "contenedor_principal">
+    <h3>Patria en juego</h3>
+    <div id="caja_de_registo">
+      <form action="#" th:action="@{/registrarme}" method="POST" th:object="${datosRegistro}">
 
         <label for="email">
         <input th:field="*{email}" id="email" required placeholder="E-mail"/>
