@@ -14,13 +14,13 @@
 
     <div class="caja-tiempo">
       <!-- tiempo para resolver -->
-      <p th:text>12:09</p>
+      <p th:text="${tiempoRestante}">12:09</p>
     </div>
 
     <div class="caja-estrellas">
       <!-- estrellas, no se si son vidas, funcion a resolver luego -->
-      <img src="#" th:src="@{/src/main/webapp/resources/core/img/}" alt="imagen-jefe">
-      <img src="#" th:src="@{/src/main/webapp/resources/core/img/}" alt="imagen-jefe">
+      <img src="#" th:src="@{/src/main/webapp/resources/core/img/estrella.png}" alt="estrella">
+      <img src="#" th:src="@{/src/main/webapp/resources/core/img/estrella.png}" alt="estrella">
     </div>
 
   </div>
@@ -35,10 +35,11 @@
   <div class="caja-preguntaYopciones">
 
   <div class="caja-pregunta">
-    <p th:text>pregunta</p>
+    <p th:text="${pregunta}">pregunta</p>
   </div>
 
     <div class="caja-opciones">
+      <!--charlar como resolver el redireccionamiento de las opciones -->
     <a href="http://">opcion a</a>
     <a href="http://">opcion b</a>
     <a href="http://">opcion c</a>
@@ -55,9 +56,12 @@
   
 </section>
 
+  <div class="caja-jefe">
+  <p>Derrotando al JEFE</p>
   <!-- imagen jefe, probar con o sin div-->
   <img src="#" th:src="@{/src/main/webapp/resources/core/img/}" alt="imagen-jefe">
-  
+  </div>
+
 </main>
 
 </body>
