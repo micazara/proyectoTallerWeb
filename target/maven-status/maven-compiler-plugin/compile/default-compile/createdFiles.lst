@@ -1,4 +1,5 @@
 com\tallerwebi\config\DatabaseInitializationConfig.class
+com\tallerwebi\presentacion\ControladorFase02.class
 com\tallerwebi\presentacion\ControladorFase01.class
 com\tallerwebi\dominio\ServicioLoginImpl.class
 com\tallerwebi\MyServletInitializer.class
@@ -11,4 +12,3 @@ com\tallerwebi\presentacion\ControladorFase3.class
 com\tallerwebi\presentacion\ControladorInicio.class
 com\tallerwebi\presentacion\Articulo.class
 com\tallerwebi\infraestructura\RepositorioUsuarioImpl.class
-com\tallerwebi\dominio\Usuario.class
