@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 G:\CELE\unlam\TALLER wEB 01\proyectoTallerWeb\src\main\java\com\tallerwebi\infraestructura\RepositorioUsuarioImpl.java
 G:\CELE\unlam\TALLER wEB 01\proyectoTallerWeb\src\main\java\com\tallerwebi\presentacion\ControladorFase3.java
 G:\CELE\unlam\TALLER wEB 01\proyectoTallerWeb\src\main\java\com\tallerwebi\presentacion\ControladorHome.java
@@ -18,3 +19,19 @@ G:\CELE\unlam\TALLER wEB 01\proyectoTallerWeb\src\main\java\com\tallerwebi\prese
 G:\CELE\unlam\TALLER wEB 01\proyectoTallerWeb\src\main\java\com\tallerwebi\presentacion\DatosLogin.java
 G:\CELE\unlam\TALLER wEB 01\proyectoTallerWeb\src\main\java\com\tallerwebi\dominio\ServicioLoginImpl.java
 G:\CELE\unlam\TALLER wEB 01\proyectoTallerWeb\src\main\java\com\tallerwebi\MyServletInitializer.java
+=======
+C:\Users\User\Desktop\ProyectoTallerWebI\tallerwebi-base\src\main\java\com\tallerwebi\presentacion\ControladorRegistro.java
+C:\Users\User\Desktop\ProyectoTallerWebI\tallerwebi-base\src\main\java\com\tallerwebi\presentacion\ControladorHome.java
+C:\Users\User\Desktop\ProyectoTallerWebI\tallerwebi-base\src\main\java\com\tallerwebi\infraestructura\RepositorioUsuarioImpl.java
+C:\Users\User\Desktop\ProyectoTallerWebI\tallerwebi-base\src\main\java\com\tallerwebi\dominio\ServicioLoginImpl.java
+C:\Users\User\Desktop\ProyectoTallerWebI\tallerwebi-base\src\main\java\com\tallerwebi\dominio\Usuario.java
+C:\Users\User\Desktop\ProyectoTallerWebI\tallerwebi-base\src\main\java\com\tallerwebi\presentacion\DatosLogin.java
+C:\Users\User\Desktop\ProyectoTallerWebI\tallerwebi-base\src\main\java\com\tallerwebi\presentacion\ControladorLogin.java
+C:\Users\User\Desktop\ProyectoTallerWebI\tallerwebi-base\src\main\java\com\tallerwebi\config\HibernateConfig.java
+C:\Users\User\Desktop\ProyectoTallerWebI\tallerwebi-base\src\main\java\com\tallerwebi\MyServletInitializer.java
+C:\Users\User\Desktop\ProyectoTallerWebI\tallerwebi-base\src\main\java\com\tallerwebi\config\DatabaseInitializationConfig.java
+C:\Users\User\Desktop\ProyectoTallerWebI\tallerwebi-base\src\main\java\com\tallerwebi\config\SpringWebConfig.java
+C:\Users\User\Desktop\ProyectoTallerWebI\tallerwebi-base\src\main\java\com\tallerwebi\dominio\RepositorioUsuario.java
+C:\Users\User\Desktop\ProyectoTallerWebI\tallerwebi-base\src\main\java\com\tallerwebi\dominio\excepcion\UsuarioExistente.java
+C:\Users\User\Desktop\ProyectoTallerWebI\tallerwebi-base\src\main\java\com\tallerwebi\dominio\ServicioLogin.java
+>>>>>>> mica

@@ -5,10 +5,17 @@ com\tallerwebi\dominio\ServicioLoginImpl.class
 com\tallerwebi\MyServletInitializer.class
 com\tallerwebi\presentacion\ControladorHome.class
 com\tallerwebi\presentacion\DatosLogin.class
+com\tallerwebi\presentacion\DatosRegistro.class
 com\tallerwebi\config\SpringWebConfig.class
 com\tallerwebi\presentacion\ControladorLogin.class
 com\tallerwebi\dominio\RepositorioUsuario.class
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 com\tallerwebi\presentacion\ControladorFase3.class
+>>>>>>> cad40e9358a1be5392579e8e60539c8bcbba7db4
 com\tallerwebi\presentacion\ControladorInicio.class
 com\tallerwebi\presentacion\Articulo.class
+=======
+>>>>>>> mica
 com\tallerwebi\infraestructura\RepositorioUsuarioImpl.class
