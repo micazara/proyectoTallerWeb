@@ -7,7 +7,7 @@
   <title>Registrarse</title>
 
   <!-- custom style -->
-  <link rel="stylesheet" th:href="@{/css/nuevo-usuario.css}"/>
+  <link rel="stylesheet" th:href="@{/css/estilos_comunes_registro_inicio_sesion.css}"/>
 
 </head>
 
@@ -17,15 +17,20 @@
 
   <div class = "contenedor_principal">
     <h3>Patria en juego</h3>
-    <div id="caja_de_registo">
-      <form action="#" th:action="@{/registrarme}" method="POST" th:object="${datosRegistro}">
+    <div class ="titulo_ingresar"><h2>Registrarse</h2></div>
+    <div id="caja_de_registro">
+      <form action="#" th:action="@{/registrar}" method="POST" th:object="${datosRegistro}">
 
         <label for="email">
         <input th:field="*{email}" id="email" required placeholder="E-mail"/>
         </label>
 
         <label for="password">
-        <input th:field="*{password}" type="password" id="password" required placeholder="Creá tu contraseña"/>
+        <input th:field="*{contrasenia}" type="password" id="password" required placeholder="Creá tu contraseña"/>
+        </label>
+
+        <label for="password_repetida">
+          <input th:field="*{contraseniaRepetida}" type="password" id="password_repetida" required placeholder="Repetí la contraseña"/>
         </label>
 
         <button id="btn-registrarme" class="btn btn-lg btn-primary btn-block" Type="Submit">Registrarme</button>
