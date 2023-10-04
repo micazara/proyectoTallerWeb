@@ -1,4 +1,23 @@
 body{
     margin: 0;
+    background-color: #3ECFE3;
+}
 
+.caja-principal{
+    background-color: #fff;
+}
+
+.caja-tiempo{
+    background-color: #f67e7e;
+}
+.caja-pregunta p{
+    background-color: #408059;
+}
+
+.caja-pregunta a{
+    background-color: #408059;
+}
+
+.caja-pregunta a:hover{
+    background-color: #3ECFE3;
 }
