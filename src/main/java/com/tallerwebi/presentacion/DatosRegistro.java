@@ -3,17 +3,17 @@ package com.tallerwebi.presentacion;
 public class DatosRegistro {
 
     private String email;
-    private String contrasenia;
-    private String contraseniaRepetida;
+    private String password;
+    private String passwordRepetida;
 
     public DatosRegistro(){
 
     }
 
-    public DatosRegistro(String email, String contrasenia, String contraseniaRepetida) {
+    public DatosRegistro(String email, String password, String passwordRepetida) {
         this.email = email;
-        this.contrasenia = contrasenia;
-        this.contraseniaRepetida = contraseniaRepetida;
+        this.password = password;
+        this.passwordRepetida = passwordRepetida;
     }
 
     public String getEmail() {
@@ -24,19 +24,19 @@ public class DatosRegistro {
         this.email = email;
     }
 
-    public String getContrasenia() {
-        return contrasenia;
+    public String getPassword() {
+        return password;
     }
 
-    public void setContrasenia(String contrasenia) {
-        this.contrasenia = contrasenia;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getContraseniaRepetida() {
-        return contraseniaRepetida;
+    public String getPasswordRepetida() {
+        return passwordRepetida;
     }
 
-    public void setContraseniaRepetida(String contraseniaRepetida) {
-        this.contraseniaRepetida = contraseniaRepetida;
+    public void setPasswordRepetida(String passwordRepetida) {
+        this.passwordRepetida = passwordRepetida;
     }
 }

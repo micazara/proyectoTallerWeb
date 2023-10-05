@@ -6,8 +6,8 @@
 
     <title>Ingresar</title>
 
-<!--    antes de mandar el html al server se debe resolver el th.-->
-<!--    datos de este html se van a completar con datos que vienen de java. th indica eso.-->
+    <!--    antes de mandar el html al server se debe resolver el th.-->
+    <!--    datos de este html se van a completar con datos que vienen de java. th indica eso.-->
     <!-- custom style -->
     <link rel="stylesheet" th:href="@{/css/login.css}"/>
     <!-- agregar la hoja de estilos de login y nuevo usuario-->
@@ -18,19 +18,23 @@
 
 <main>
 
-    <div class = "contenedor_principal">
+    <div class="contenedor_principal">
         <h3>Patria en juego</h3>
         <div class="caja_de_login">
-
-            <div class ="titulo_ingresar"><h2>Ingresar</h2></div>
+            <div class="titulo_ingresar"><h2>Ingresar</h2></div>
             <form action="#" th:action="@{/validar-login}" method="POST" th:object="${datosLogin}">
                 <!--object dice q modelo va a reicibir paraa llenar el form. Es el que está en el request mapping con url login. linea 26 en el controlador.-->
-                <div class ="inputs">
-                <!--set de email en este input. por eso tienen qe estar los getters y setters-->
-                <input th:field="*{email}" id="email" type="email" class="campos" required placeholder="E-mail"/>
-                <input th:field="*{password}" type="password" id="password" class="campos" required placeholder="Contraseña"/>
-
-               </div>
+                <div class="inputs">
+                    <!--set de email en este input. por eso tienen qe estar los getters y setters-->
+                    <label for="email">
+                        <input th:field="*{email}" id="email" type="email" class="campos" required
+                               placeholder="E-mail"/>
+                    </label>
+                    <label for="password">
+                    <input th:field="*{password}" type="password" id="password" class="campos" required
+                           placeholder="Contraseña"/>
+                    </label>
+                </div>
 
                 <div>
                     <button class="boton_ingresar" Type="Submit">Ingresar</button>
@@ -41,11 +45,8 @@
             </form>
 
 
-
-
-
         </div>
-        <a href="src/main/webapp/WEB-INF/views/thymeleaf/home.html">Volver</a>
+        <a href="src/main/webapp/WEB-INF/views/thymeleaf/home.html" class="boton_de_volver">Volver</a>
     </div>
 </main>
 <!-- /.container -->

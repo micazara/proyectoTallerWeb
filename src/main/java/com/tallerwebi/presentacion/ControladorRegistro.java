@@ -51,11 +51,11 @@ public class ControladorRegistro {
         return contieneMayusculas;
     }
 
-    @RequestMapping(path = "/nuevo-usuario")
-    public ModelAndView irANuevoUsuario() {
+    @RequestMapping(path = "/registrarse")
+    public ModelAndView irARegistrarse() {
         ModelMap modelo = new ModelMap();
         modelo.put("datosRegistro", new DatosRegistro());
-        return new ModelAndView("nuevo-usuario", modelo);
+        return new ModelAndView("registrarse", modelo);
     }
 
 }
