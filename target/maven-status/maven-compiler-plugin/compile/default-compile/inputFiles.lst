@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 G:\CELE\unlam\TALLER wEB 01\proyectoTallerWeb\src\main\java\com\tallerwebi\infraestructura\RepositorioUsuarioImpl.java
+G:\CELE\unlam\TALLER wEB 01\proyectoTallerWeb\src\main\java\com\tallerwebi\presentacion\ControladorFase3.java
 G:\CELE\unlam\TALLER wEB 01\proyectoTallerWeb\src\main\java\com\tallerwebi\presentacion\ControladorHome.java
 G:\CELE\unlam\TALLER wEB 01\proyectoTallerWeb\src\main\java\com\tallerwebi\presentacion\ControladorFase01.java
 G:\CELE\unlam\TALLER wEB 01\proyectoTallerWeb\src\main\java\com\tallerwebi\dominio\ServicioLogin.java
@@ -14,6 +15,7 @@ G:\CELE\unlam\TALLER wEB 01\proyectoTallerWeb\src\main\java\com\tallerwebi\prese
 G:\CELE\unlam\TALLER wEB 01\proyectoTallerWeb\src\main\java\com\tallerwebi\config\HibernateConfig.java
 G:\CELE\unlam\TALLER wEB 01\proyectoTallerWeb\src\main\java\com\tallerwebi\dominio\RepositorioUsuario.java
 G:\CELE\unlam\TALLER wEB 01\proyectoTallerWeb\src\main\java\com\tallerwebi\presentacion\ControladorInicio.java
+G:\CELE\unlam\TALLER wEB 01\proyectoTallerWeb\src\main\java\com\tallerwebi\presentacion\ControladorFase02.java
 G:\CELE\unlam\TALLER wEB 01\proyectoTallerWeb\src\main\java\com\tallerwebi\presentacion\DatosLogin.java
 G:\CELE\unlam\TALLER wEB 01\proyectoTallerWeb\src\main\java\com\tallerwebi\dominio\ServicioLoginImpl.java
 G:\CELE\unlam\TALLER wEB 01\proyectoTallerWeb\src\main\java\com\tallerwebi\MyServletInitializer.java
