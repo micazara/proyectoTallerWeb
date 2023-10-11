@@ -24,38 +24,40 @@
 
             <p class="titulo">LAS PROVINCIAS A CONQUISTAR : </p>
 
+            <div>
 
-            <ul class="list-group">
-                <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Tierra del Fuego</li>
-                <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Santa Cruz</li>
-                <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Chubut</li>
-                <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Río Negro</li>
-                <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">La pampa</li>
-                <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Neuquen</li>
-                <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Mendoza</li>
-                <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Buenos Aires</li>
-                <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Ciudad Autonoma de Bs
-                    As
-                </li>
-                <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">San Luis</li>
-                <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Córdoba</li>
-                <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">San Juan</li>
-
-                <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">La Rioja</li>
-                <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Catamarca</li>
-                <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Tucuman</li>
-                <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Santiago del Estero
-                </li>
-                <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Santa Fe</li>
-                <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Entre Rios</li>
-                <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Corrientes</li>
-                <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Misiones</li>
-                <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Chaco</li>
-                <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Formosa</li>
-                <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Salta</li>
-                <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Jujuy</li>
-            </ul>
-
+                <ul class="list-group">
+                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Tierra del Fuego</li>
+                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Santa Cruz</li>
+                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Chubut</li>
+                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Río Negro</li>
+                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">La pampa</li>
+                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Neuquen</li>
+                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Mendoza</li>
+                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Buenos Aires</li>
+                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">CABA</li>
+                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">San Luis</li>
+                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Córdoba</li>
+                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">San Juan</li>
+                </ul>
+            </div>
+            <div>
+                <ul class="list-group">
+                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">La Rioja</li>
+                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Catamarca</li>
+                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Tucuman</li>
+                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Santiago del Estero
+                    </li>
+                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Santa Fe</li>
+                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Entre Rios</li>
+                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Corrientes</li>
+                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Misiones</li>
+                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Chaco</li>
+                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Formosa</li>
+                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Salta</li>
+                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Jujuy</li>
+                </ul>
+            </div>
 
         </div>
 
@@ -69,7 +71,7 @@
             <p th:text="${provinciaActual}">Tierra del Fuego</p>
             <input type="button" value="¡Ir a la batalla!" class="boton-batalla">
 
-            <div  class="frase">
+            <div class="frase">
                 <p>--Si los pueblos no se ilustran, si no se divulgan sus derechos, si cada hombre no conoce lo
                     que puede, vale y debe, nuevas ilusiones sucederán a las antiguas y será tal vez nuestra
                     suerte cambiar de tiranos sin destruir la tiranía--</p>
@@ -81,7 +83,7 @@
     </section>
 </main>
 <footer>
-    <p>   Unlam--DII T2023</p>
+    <p> Unlam--DII T2023</p>
     <p>Gambaro,Moscovich,Pereyra,Zara</p>
 
 </footer>
