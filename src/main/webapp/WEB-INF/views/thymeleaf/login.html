@@ -22,6 +22,7 @@
         <h3>Patria en juego</h3>
         <div class="caja_de_login">
             <div class="titulo_ingresar"><h2>Ingresar</h2></div>
+
             <form action="#" th:action="@{/validar-login}" method="POST" th:object="${datosLogin}">
                 <!--object dice q modelo va a reicibir paraa llenar el form. Es el que está en el request mapping con url login. linea 26 en el controlador.-->
                 <div class="inputs">
