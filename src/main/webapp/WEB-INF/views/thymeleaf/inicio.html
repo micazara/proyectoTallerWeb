@@ -20,11 +20,9 @@
 
     <section class="columnas">
 
+        <div class="caja-pr-mayor">
+        <p class="titulo">LAS PROVINCIAS A CONQUISTAR : </p>
         <div class="caja-prov">
-
-            <p class="titulo">LAS PROVINCIAS A CONQUISTAR : </p>
-
-            <div>
 
                 <ul class="list-group">
                     <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Tierra del Fuego</li>
@@ -40,12 +38,11 @@
                     <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Córdoba</li>
                     <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">San Juan</li>
                 </ul>
-            </div>
-            <div>
-                <ul class="list-group">
+            <ul class="list-group">
                     <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">La Rioja</li>
                     <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Catamarca</li>
                     <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Tucuman</li>
+
                     <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Santiago del Estero
                     </li>
                     <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Santa Fe</li>
@@ -57,10 +54,10 @@
                     <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Salta</li>
                     <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Jujuy</li>
                 </ul>
-            </div>
+
 
         </div>
-
+        </div>
         <div class="contenedor-accion-juego">
 
             <!-- USO th:text Para reemplazar el nombre
