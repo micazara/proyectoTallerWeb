@@ -5,7 +5,9 @@ import com.tallerwebi.dominio.Usuario;
 import com.tallerwebi.dominio.excepcion.UsuarioExistente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -45,7 +47,8 @@ public class ControladorLogin {
         Usuario usuarioBuscado = servicioLogin.consultarUsuario(datosLogin.getEmail(), datosLogin.getPassword());
         if (usuarioBuscado != null) {
             request.getSession().setAttribute("ROL", usuarioBuscado.getRol());
-            return new ModelAndView("redirect:/home");
+            ModelMap modeloNivel = actualizarNivel(usuarioBuscado);
+            return new ModelAndView("inicio",modeloNivel);
         } else {
             model.put("error", "Usuario o clave incorrecta");
         }
@@ -87,31 +90,14 @@ public class ControladorLogin {
     }
     // "/" es la raiz
 
-    @RequestMapping("/prueba")
-    public ModelAndView irAPrueba() {
 
-        ModelMap modelo = new ModelMap();
-        return new ModelAndView("prueba", modelo);
+    @GetMapping("/inicio")
+    public ModelMap actualizarNivel(Usuario usuario) {
+        ModelMap model = new ModelMap();
+
+        model.addAttribute("nivelActual", servicioLogin.consultarNivelActual(usuario));
+        // Retorna la vista que utilizará Thymeleaf
+        return model;
     }
-
-    @RequestMapping("/prueba2")
-    public ModelAndView irAPrueba2() {
-        ModelMap modelo = new ModelMap();
-        return new ModelAndView("prueba2", modelo);
-
-    }
-
-    @RequestMapping("/probando-urls")
-    public ModelAndView irAProbandoUrls() {
-        ModelMap modelo = new ModelMap();
-        return new ModelAndView("probando-urls", modelo);
-    }
-
-    @RequestMapping("/probando-urls/home")
-    public ModelAndView volverAlHomeDesdeProbandoUrls() {
-        ModelMap modelo = new ModelMap();
-        return new ModelAndView("home", modelo);
-    }
-
 }
 
