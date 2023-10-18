@@ -20,11 +20,9 @@
 
     <section class="columnas">
 
+        <div class="caja-pr-mayor">
+        <p class="titulo">LAS PROVINCIAS A CONQUISTAR : </p>
         <div class="caja-prov">
-
-            <p class="titulo">LAS PROVINCIAS A CONQUISTAR : </p>
-
-            <div>
 
                 <ul class="list-group">
                     <li class="list-group-item" class="nivel-pintado">Tierra del Fuego</li>
@@ -40,6 +38,7 @@
                     <li class="list-group-item" th:classappend="${nivelActual>= 11? 'nivel-pintado' : ''}">Córdoba</li>
                     <li class="list-group-item" th:classappend="${nivelActual>= 12 ? 'nivel-pintado' : ''}">San Juan</li>
                 </ul>
+
             </div>
             <div>
                 <ul class="list-group">
@@ -47,6 +46,7 @@
                     <li class="list-group-item" th:class="${nivelActual>= 14 ? 'nivel-pintado' : ''}">Catamarca</li>
                     <li class="list-group-item" th:class="${nivelActual>= 15? 'nivel-pintado' : ''}">Tucuman</li>
                     <li class="list-group-item" th:class="${nivelActual>= 16 ? 'nivel-pintado' : ''}">Santiago del Estero
+
                     </li>
                     <li class="list-group-item" th:class="${nivelActual>= 17 ? 'nivel-pintado' : ''}">Santa Fe</li>
                     <li class="list-group-item" th:class="${nivelActual>= 18 ? 'nivel-pintado' : ''}">Entre Rios</li>
@@ -57,10 +57,10 @@
                     <li class="list-group-item" th:class="${nivelActual>= 23 ? 'nivel-pintado' : ''}">Salta</li>
                     <li class="list-group-item" th:class="${nivelActual>= 24 ? 'nivel-pintado' : ''}">Jujuy</li>
                 </ul>
-            </div>
+
 
         </div>
-
+        </div>
         <div class="contenedor-accion-juego">
 
             <!-- USO th:text Para reemplazar el nombre

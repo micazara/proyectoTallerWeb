@@ -31,5 +31,12 @@ public class ServicioLoginImpl implements ServicioLogin {
         servicioLoginDao.guardar(usuario);
     }
 
+    @Override
+    public String consultarNivelActual(Usuario usuario) {
+        Usuario actual=usuario;
+        return actual.getNivel();
+    }
+
+
 }
 

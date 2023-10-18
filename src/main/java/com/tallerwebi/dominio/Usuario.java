@@ -14,7 +14,10 @@ public class Usuario {
     private String email;
     private String password;
     private String rol;
+    private String nivel;
     private Boolean activo = false;
+    private Integer vidas;
+    private Boolean vivo = true;
 
     public Long getId() {
         return id;
@@ -54,4 +57,32 @@ public class Usuario {
     public void activar() {
         activo = true;
     }
+
+public Integer getVidas() {
+        return vidas;
+    }
+
+    public void aumentarVidas() {
+        this.vidas = vidas++;
+    }
+
+public Boolean estaVivo() {
+        return vivo;
+    }
+
+public void setVivo(Boolean estado) {
+        this.vivo=estado;
+    }
+
+    public String  getNivel() {
+        return this.nivel;
+    }
+
+    public void  setNivel(String  nuevo) {
+         this.nivel=nuevo;
+    }
 }
+
+
+
+
