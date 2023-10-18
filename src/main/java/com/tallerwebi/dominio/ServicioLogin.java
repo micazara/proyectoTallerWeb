@@ -4,8 +4,10 @@ import com.tallerwebi.dominio.excepcion.UsuarioExistente;
 
 public interface ServicioLogin {
 
-    Usuario consultarUsuario(String email, String password);
-    void registrar(Usuario usuario) throws UsuarioExistente;
-    String consultarNivelActual(Usuario usuario);
+	Usuario consultarUsuario(String email, String password);
+
+	void registrar(Usuario usuario) throws UsuarioExistente;
+
+	Integer consultarNivelActual(Usuario usuario);
 
 }
