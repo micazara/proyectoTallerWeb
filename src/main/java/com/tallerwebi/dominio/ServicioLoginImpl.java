@@ -32,7 +32,7 @@ public class ServicioLoginImpl implements ServicioLogin {
     }
 
     @Override
-    public String consultarNivelActual(Usuario usuario) {
+    public Integer consultarNivelActual(Usuario usuario) {
         Usuario actual=usuario;
         return actual.getNivel();
     }

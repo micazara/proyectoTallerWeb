@@ -14,7 +14,7 @@ public class Usuario {
     private String email;
     private String password;
     private String rol;
-    private String nivel;
+    private Integer nivel;
     private Boolean activo = false;
     private Integer vidas;
     private Boolean vivo = true;
@@ -74,11 +74,11 @@ public void setVivo(Boolean estado) {
         this.vivo=estado;
     }
 
-    public String  getNivel() {
+    public Integer  getNivel() {
         return this.nivel;
     }
 
-    public void  setNivel(String  nuevo) {
+    public void  setNivel(Integer  nuevo) {
          this.nivel=nuevo;
     }
 }
