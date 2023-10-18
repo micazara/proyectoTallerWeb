@@ -27,35 +27,35 @@
             <div>
 
                 <ul class="list-group">
-                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Tierra del Fuego</li>
-                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Santa Cruz</li>
-                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Chubut</li>
-                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Río Negro</li>
-                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">La pampa</li>
-                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Neuquen</li>
-                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Mendoza</li>
-                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Buenos Aires</li>
-                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">CABA</li>
-                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">San Luis</li>
-                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Córdoba</li>
-                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">San Juan</li>
+                    <li class="list-group-item" class="nivel-pintado">Tierra del Fuego</li>
+                    <li class="list-group-item" th:classappend="${nivelActual>= 2 ? 'nivel-pintado' : ''}">Santa Cruz</li>
+                    <li class="list-group-item" th:classappend="${nivelActual>= 3 ? 'nivel-pintado' : ''}">Chubut</li>
+                    <li class="list-group-item" th:classappend="${nivelActual>= 4 ? 'nivel-pintado' : ''}">Río Negro</li>
+                    <li class="list-group-item" th:classappend="${nivelActual>= 5 ? 'nivel-pintado' : ''}">La pampa</li>
+                    <li class="list-group-item" th:classappend="${nivelActual>= 6 ? 'nivel-pintado' : ''}">Neuquen</li>
+                    <li class="list-group-item" th:classappend="${nivelActual>= 7 ? 'nivel-pintado' : ''}">Mendoza</li>
+                    <li class="list-group-item" th:classappend="${nivelActual>= 8 ? 'nivel-pintado' : ''}">Buenos Aires</li>
+                    <li class="list-group-item" th:classappend="${nivelActual>= 9 ? 'nivel-pintado' : ''}">CABA</li>
+                    <li class="list-group-item" th:classappend="${nivelActual>= 10 ? 'nivel-pintado' : ''}">San Luis</li>
+                    <li class="list-group-item" th:classappend="${nivelActual>= 11? 'nivel-pintado' : ''}">Córdoba</li>
+                    <li class="list-group-item" th:classappend="${nivelActual>= 12 ? 'nivel-pintado' : ''}">San Juan</li>
                 </ul>
             </div>
             <div>
                 <ul class="list-group">
-                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">La Rioja</li>
-                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Catamarca</li>
-                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Tucuman</li>
-                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Santiago del Estero
+                    <li class="list-group-item" th:class="${nivelActual>= 13 ? 'nivel-pintado' : ''}">La Rioja</li>
+                    <li class="list-group-item" th:class="${nivelActual>= 14 ? 'nivel-pintado' : ''}">Catamarca</li>
+                    <li class="list-group-item" th:class="${nivelActual>= 15? 'nivel-pintado' : ''}">Tucuman</li>
+                    <li class="list-group-item" th:class="${nivelActual>= 16 ? 'nivel-pintado' : ''}">Santiago del Estero
                     </li>
-                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Santa Fe</li>
-                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Entre Rios</li>
-                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Corrientes</li>
-                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Misiones</li>
-                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Chaco</li>
-                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Formosa</li>
-                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Salta</li>
-                    <li class="list-group-item" th:class="${someCondition} ? 'disabled' : ''">Jujuy</li>
+                    <li class="list-group-item" th:class="${nivelActual>= 17 ? 'nivel-pintado' : ''}">Santa Fe</li>
+                    <li class="list-group-item" th:class="${nivelActual>= 18 ? 'nivel-pintado' : ''}">Entre Rios</li>
+                    <li class="list-group-item" th:class="${nivelActual>= 19 ? 'nivel-pintado' : ''}">Corrientes</li>
+                    <li class="list-group-item" th:class="${nivelActual>= 20 ? 'nivel-pintado' : ''}">Misiones</li>
+                    <li class="list-group-item" th:class="${nivelActual>= 21 ? 'nivel-pintado' : ''}">Chaco</li>
+                    <li class="list-group-item" th:class="${nivelActual>= 22 ? 'nivel-pintado' : ''}">Formosa</li>
+                    <li class="list-group-item" th:class="${nivelActual>= 23 ? 'nivel-pintado' : ''}">Salta</li>
+                    <li class="list-group-item" th:class="${nivelActual>= 24 ? 'nivel-pintado' : ''}">Jujuy</li>
                 </ul>
             </div>
 
