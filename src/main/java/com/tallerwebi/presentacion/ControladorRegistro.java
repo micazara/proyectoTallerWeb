@@ -1,10 +1,8 @@
 package com.tallerwebi.presentacion;
 
-import com.tallerwebi.dominio.Usuario;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -53,9 +51,11 @@ public class ControladorRegistro {
         return contieneMayusculas;
     }
 
-    @RequestMapping(path = "/nuevo-usuario")
-    public ModelAndView nuevoUsuario() {
-        return new ModelAndView("nuevo-usuario");
+    @RequestMapping(path = "/registrarse")
+    public ModelAndView irARegistrarse() {
+        ModelMap modelo = new ModelMap();
+        modelo.put("datosRegistro", new DatosRegistro());
+        return new ModelAndView("registrarse", modelo);
     }
 
 }

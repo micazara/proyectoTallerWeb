@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <!-- custom style -->
-  <link rel="stylesheet" th:href="@{/css/main.css}"/>
+  <link rel="stylesheet" th:href="@{/css/fase03.css}"/>
   <title>Fase 3</title>
 
 </head>
@@ -13,14 +13,16 @@
   <div class="caja-header">
 
     <div class="caja-tiempo">
+      <!--este lo comente porque el navegador no me lo agarraba y lo necesitaba para maquetar-->
       <!-- tiempo para resolver -->
-      <p th:text="${tiempoRestante}">12:09</p>
+      <!--      <p th:text="${tiempoRestante}">holi</p>-->
+      <p>tiempo restante</p>
     </div>
 
     <div class="caja-estrellas">
       <!-- estrellas, no se si son vidas, funcion a resolver luego -->
-      <img src="#" th:src="@{/src/main/webapp/resources/core/img/estrella.png}" alt="estrella">
-      <img src="#" th:src="@{/src/main/webapp/resources/core/img/estrella.png}" alt="estrella">
+      <img src="#" th:src="@{/img/estrella.png}" alt="estrella">
+      <img src="#" th:src="@{/img/estrella.png}" alt="estrella">
     </div>
 
   </div>
@@ -35,7 +37,10 @@
   <div class="caja-preguntaYopciones">
 
   <div class="caja-pregunta">
-    <p th:text="${pregunta}">pregunta</p>
+<!--
+lo comento para usarlo para el css
+<p th:text="${pregunta}">pregunta</p>-->
+    <p>pregunta</p>
   </div>
 
     <div class="caja-opciones">
@@ -51,7 +56,7 @@
 
   <!--imagen provincia -->
   <div class="caja-imagen-provicia">
-    <img src="#" th:src="@{/src/main/webapp/resources/core/img/}" alt="imagen-provincia">
+    <img src="#" th:src="@{/img/mapa-provincia.png}" alt="imagen-provincia">
   </div>
   
 </section>
@@ -59,7 +64,7 @@
   <div class="caja-jefe">
   <p>Derrotando al JEFE</p>
   <!-- imagen jefe, probar con o sin div-->
-  <img src="#" th:src="@{/src/main/webapp/resources/core/img/}" alt="imagen-jefe">
+  <img src="#" th:src="@{/img/jefe-provincia.png}" alt="imagen-jefe">
   </div>
 
 </main>
