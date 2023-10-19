@@ -24,5 +24,8 @@ public class ControladorInicio {
         return new ModelAndView("inicio");
     }
 
-
+//    public void instanciarNiveles() {
+//    	Nivel tierraDelFuego= new Nivel ();
+//
+//    }
 }
