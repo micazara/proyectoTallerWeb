@@ -13,6 +13,8 @@ import java.util.Properties;
 @Configuration
 @EnableTransactionManagement
 public class HibernateConfig {
+	
+	//CONFIGURAR DATASOURCE BEAN,PARA PONER EN EL SQL EL DRIVER  
 
     @Bean
     public DataSource dataSource() {
