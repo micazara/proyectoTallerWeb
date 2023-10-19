@@ -1,5 +1,6 @@
 package com.tallerwebi.dominio;
 
 public interface RepositorioPregunta {
-Pregunta buscarPregunta(String id);
+Pregunta buscarPregunta(Integer id);
+Pregunta getPreguntaPorNivel();
 }

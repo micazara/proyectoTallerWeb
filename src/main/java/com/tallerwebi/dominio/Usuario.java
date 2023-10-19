@@ -8,81 +8,68 @@ import javax.persistence.Id;
 @Entity
 public class Usuario {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String email;
-    private String password;
-    private String rol;
-    private Integer nivel;
-    private Boolean activo = false;
-    private Integer vidas;
-    private Boolean vivo = true;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String email;
+	private String password;
+	private String rol;
+	private Integer nivel;
+	private Boolean activo = false;
 
-    public Long getId() {
-        return id;
-    }
-    public void setId(Long id) {
-        this.id = id;
-    }
-    public String getEmail() {
-        return email;
-    }
-    public void setEmail(String email) {
-        this.email = email;
-    }
-    public String getPassword() {
-        return password;
-    }
-    public void setPassword(String password) {
-        this.password = password;
-    }
-    public String getRol() {
-        return rol;
-    }
-    public void setRol(String rol) {
-        this.rol = rol;
-    }
-    public Boolean getActivo() {
-        return activo;
-    }
-    public void setActivo(Boolean activo) {
-        this.activo = activo;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public boolean activo() {
-        return activo;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public void activar() {
-        activo = true;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-public Integer getVidas() {
-        return vidas;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public void aumentarVidas() {
-        this.vidas = vidas++;
-    }
+	public String getPassword() {
+		return password;
+	}
 
-public Boolean estaVivo() {
-        return vivo;
-    }
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-public void setVivo(Boolean estado) {
-        this.vivo=estado;
-    }
+	public String getRol() {
+		return rol;
+	}
 
-    public Integer  getNivel() {
-        return this.nivel;
-    }
+	public void setRol(String rol) {
+		this.rol = rol;
+	}
 
-    public void  setNivel(Integer  nuevo) {
-         this.nivel=nuevo;
-    }
+	public Boolean getActivo() {
+		return activo;
+	}
+
+	public void setActivo(Boolean activo) {
+		this.activo = activo;
+	}
+
+	public boolean activo() {
+		return activo;
+	}
+
+	public void activar() {
+		activo = true;
+	}
+
+	public Integer getNivel() {
+		return this.nivel;
+	}
+
+	public void setNivel(Integer nuevo) {
+		this.nivel = nuevo;
+	}
 }
-
-
-
-
