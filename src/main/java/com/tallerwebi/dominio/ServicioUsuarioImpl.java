@@ -20,7 +20,6 @@ public class ServicioUsuarioImpl implements ServicioUsuario {
 		usuario.setActivo(true);
 		usuario.setRol("usuario");
 		usuario.setNivel(1);
-		usuario.setVivo(true);
 		repositorioUsuario.guardar(usuario);
 	}
 
