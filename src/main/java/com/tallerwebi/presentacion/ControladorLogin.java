@@ -33,7 +33,8 @@ public class ControladorLogin {
         // el valor es un objeto vacio
         modelo.put("datosLogin", new DatosLogin());
         // esta linea devuelve una vista con los datos. viewname es el nombre de la vistsa q quiero retornar
-        // modelo: set de datos que puede ser representado con una clase linkeado con la vista. Sirve para guardar los datos deseados.
+        // modelo: set de datos que puede ser representado con una clase linkeado con 
+        //la vista. Sirve para guardar los datos deseados.
         // Los datos que ingresan por la vista se guardan en el modelo para analizar, validar, etc.
         // El modelo es una instancia de una clase con los datos deseados.
         // Cuando el usuario guarda datos se van guardando en DatosLogin

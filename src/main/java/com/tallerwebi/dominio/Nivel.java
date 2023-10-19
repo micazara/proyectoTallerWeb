@@ -10,14 +10,14 @@ public class Nivel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
     private String nombre;
     
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
-    public void setId(Long id) {
-        this.id = id;
+    public void setId(Integer i) {
+        this.id = i;
     }
     public String getNombre() {
         return nombre;

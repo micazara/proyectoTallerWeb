@@ -1,6 +1,9 @@
 package com.tallerwebi.dominio;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Usuario {
@@ -8,14 +11,11 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String email;
     private String password;
     private String rol;
     private Integer nivel;
     private Boolean activo = false;
-    private Integer vidas;
-    private Boolean vivo = true;
 
     public Long getId() {
         return id;
@@ -56,22 +56,6 @@ public class Usuario {
         activo = true;
     }
 
-public Integer getVidas() {
-        return vidas;
-    }
-
-    public void aumentarVidas() {
-        this.vidas = vidas++;
-    }
-
-public Boolean estaVivo() {
-        return vivo;
-    }
-
-public void setVivo(Boolean estado) {
-        this.vivo=estado;
-    }
-
     public Integer  getNivel() {
         return this.nivel;
     }
@@ -80,7 +64,3 @@ public void setVivo(Boolean estado) {
          this.nivel=nuevo;
     }
 }
-
-
-
-
