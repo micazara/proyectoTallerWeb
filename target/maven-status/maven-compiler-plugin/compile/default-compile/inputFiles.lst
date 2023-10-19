@@ -8,6 +8,7 @@
 /Users/victoriagambaro/IdeaProjects/proyectoTallerWeb/src/main/java/com/tallerwebi/dominio/excepcion/CampoVacio.java
 /Users/victoriagambaro/IdeaProjects/proyectoTallerWeb/src/main/java/com/tallerwebi/presentacion/ControladorFase02.java
 /Users/victoriagambaro/IdeaProjects/proyectoTallerWeb/src/main/java/com/tallerwebi/presentacion/ControladorHome.java
+/Users/victoriagambaro/IdeaProjects/proyectoTallerWeb/src/main/java/com/tallerwebi/dominio/ServicioUsuario.java
 /Users/victoriagambaro/IdeaProjects/proyectoTallerWeb/src/main/java/com/tallerwebi/presentacion/ControladorLogin.java
 /Users/victoriagambaro/IdeaProjects/proyectoTallerWeb/src/main/java/com/tallerwebi/dominio/Respuesta.java
 /Users/victoriagambaro/IdeaProjects/proyectoTallerWeb/src/main/java/com/tallerwebi/config/HibernateConfig.java
@@ -17,6 +18,7 @@
 /Users/victoriagambaro/IdeaProjects/proyectoTallerWeb/src/main/java/com/tallerwebi/dominio/RepositorioUsuario.java
 /Users/victoriagambaro/IdeaProjects/proyectoTallerWeb/src/main/java/com/tallerwebi/presentacion/ControladorRegistro.java
 /Users/victoriagambaro/IdeaProjects/proyectoTallerWeb/src/main/java/com/tallerwebi/dominio/RepositorioRespuesta.java
+/Users/victoriagambaro/IdeaProjects/proyectoTallerWeb/src/main/java/com/tallerwebi/dominio/ServicioUsuarioImpl.java
 /Users/victoriagambaro/IdeaProjects/proyectoTallerWeb/src/main/java/com/tallerwebi/config/SpringWebConfig.java
 /Users/victoriagambaro/IdeaProjects/proyectoTallerWeb/src/main/java/com/tallerwebi/dominio/Nivel.java
 /Users/victoriagambaro/IdeaProjects/proyectoTallerWeb/src/main/java/com/tallerwebi/presentacion/ControladorFase3.java

@@ -1,2 +1,4 @@
 com/tallerwebi/dominio/Nivel.class
+com/tallerwebi/dominio/ServicioUsuario.class
 com/tallerwebi/dominio/excepcion/CampoVacio.class
+com/tallerwebi/dominio/ServicioUsuarioImpl.class

@@ -22,6 +22,8 @@
       <a th:href="@{/login.html}">Login</a>
       <a th:href="@{/registrarse.html}">Registrarse</a>
     </div>
+    <p th:if="${registroExitoso != null}" class="mensaje_error" th:text="${registroExitoso}">
+    </p>
     </div>
 
 
