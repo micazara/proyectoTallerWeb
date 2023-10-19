@@ -106,6 +106,13 @@
             <version>${playwright.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- Para el motor de base de datos-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.28</version> <!-- Puedes ajustar la versión según la que necesites -->
+        </dependency>
         <!-- compile only, deployed container will provide this -->
         <!--
         <dependency>
@@ -153,6 +160,8 @@
                     <webApp>
                         <contextPath>/spring</contextPath>
                     </webApp>
+                    <stopKey>STOP</stopKey>
+                    <stopPort>8080</stopPort>
                 </configuration>
             </plugin>
 
