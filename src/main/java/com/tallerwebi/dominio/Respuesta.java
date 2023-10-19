@@ -17,7 +17,7 @@ public class Respuesta {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 	private Boolean esCorrecta;
 	private Integer idAsociado;
 	private String descripcion;
@@ -41,11 +41,11 @@ public class Respuesta {
 		this.pregunta = pregunta;
 	}
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
