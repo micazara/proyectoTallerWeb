@@ -23,10 +23,12 @@ public class SerivicoInicioImpl implements ServicioInicio {
 	}
 
 	@Override
-	public void instanciarPreguntas() {
-		// TODO Auto-generated method stub
+	public void guardarPregunta(Pregunta pregunta) {
+		this.servicioInicio.guardarPregunta(pregunta);
 		
 	}
+
+
 
 	
 }
