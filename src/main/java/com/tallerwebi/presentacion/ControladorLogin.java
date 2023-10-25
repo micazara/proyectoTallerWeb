@@ -48,8 +48,9 @@ public class ControladorLogin {
         Usuario usuarioBuscado = servicioLogin.consultarUsuario(datosLogin.getEmail(), datosLogin.getPassword());
         if (usuarioBuscado != null) {
             request.getSession().setAttribute("ROL", usuarioBuscado.getRol());
-            ModelMap modeloNivel = actualizarNivel(usuarioBuscado);
-            return new ModelAndView("inicio",modeloNivel);
+            model.addAttribute("nivelActual", servicioLogin.consultarNivelActual(usuarioBuscado));
+            model.addAttribute("usuario", usuarioBuscado);
+            return new ModelAndView("inicio",model);
         } else {
             model.put("error", "Usuario o clave incorrecta");
         }
@@ -91,14 +92,5 @@ public class ControladorLogin {
     }
     // "/" es la raiz
 
-
-    @GetMapping("/inicio")
-    public ModelMap actualizarNivel(Usuario usuario) {
-        ModelMap model = new ModelMap();
-
-        model.addAttribute("nivelActual", servicioLogin.consultarNivelActual(usuario));
-        // Retorna la vista que utilizará Thymeleaf
-        return model;
-    }
 }
 
