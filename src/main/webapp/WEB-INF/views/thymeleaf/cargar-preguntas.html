@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Patria en Juego--cargar Preguntas</title>
+<!-- custom style -->
+<link rel="stylesheet" th:href="@{/css/cargarPreguntas.css}" />
+<!-- Boostrap core css -->
+<link rel="stylesheet"
+	th:href="@{/webjars/bootstrap/5.2.0/css/bootstrap.min.css}" />
+
+</head>
+
+<body>
+	<header class="encabezado">
+		<h3>Patria en Juego</h3>
+		<img src="#" alt="pfilUser"
+			th:src="@{/src/main/webapp/resources/core/img/fondo-home.png}">
+	</header>
+	<main>
+
+		<h2>INGRESA OPCIONES</h2>
+
+	
+
+
+			<!--ENVIAR FORM-->
+			<div>
+				<button class="boton" Type="Submit">Enviar mi pregunta</button>
+			</div>
+			<p th:if="${error != null}" class="mensaje_error"
+				th:text="'Error ' + ${error}"></p>
+
+		
+
+		<div>
+			<a th:href="@{/cargarPregunta}" class="boton_de_volver">Volver</a>
+		</div>
+	</main>
+
+</body>
+</html>

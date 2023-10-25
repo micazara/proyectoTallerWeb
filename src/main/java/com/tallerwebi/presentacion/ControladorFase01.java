@@ -11,11 +11,14 @@ import org.springframework.web.servlet.ModelAndView;
 public class ControladorFase01 {
     //CONTADOR DE TIEMPO
     private int contador = 0;
+    
+    
     @RequestMapping(path = "/fase1")
     public ModelAndView fase01() {
-
+// de la partida obtengo el nivel y de ahi las preguntas
         return new ModelAndView("fase1");
     }
+    
     @RequestMapping(path = "/contador", method = RequestMethod.GET)
     public ModelAndView mostrarContador() {
         ModelAndView modelAndView = new ModelAndView("fase1");
