@@ -35,22 +35,13 @@
 
 			<div th:unless="${pregunta.fase == 1}">
 				<!-- Campos para las demas -->
-				<label for="opcion1">respuesta 1 CORRECTA<input
-					th:field="*{descripcion}" id="descripcion" required
-					placeholder="respuesta..." /></label> 
-					<br> 
-				<label for="opcion2">respuesta 2 <input th:field="*{descripcion}" id="descripcion"
-					required placeholder="respuesta..." />
-				</label> 
-				    <br>
-				 <label for="opcion2">respuesta 3 <input
-					th:field="*{descripcion}" id="descripcion" required
-					placeholder="respuesta..." /></label>
-					 <br>
-				 <label for="opcion2">respuesta 4 <input th:field="*{descripcion}" id="descripcion"
-					required placeholder="respuesta..." />
-				</label>
-
+				
+				<th:block th:each="pregunta : ${preguntas}">
+        <label for="descripcion">Ingresa tu pregunta <input th:field="*{pregunta.descripcion}" id="descripcion" required placeholder="Pregunta" /></label> <br>
+        <label for="nivel">Nivel <input th:field="*{pregunta.nivel}" id="nivel" required placeholder="Nivel" /></label> <br>
+        <label for="fase">Fase <input th:field="*{pregunta.fase}" id="fase" required placeholder="Fase" /></label> <br>
+    </th:block>
+				
 			</div>
 
 
