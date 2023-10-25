@@ -13,13 +13,15 @@ import java.util.Properties;
 @Configuration
 @EnableTransactionManagement
 public class HibernateConfig {
+	
+	//CONFIGURAR DATASOURCE BEAN,PARA PONER EN EL SQL EL DRIVER  
 
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("org.hsqldb.jdbcDriver");
         dataSource.setUrl("jdbc:hsqldb:mem:db_");
-        dataSource.setUsername("sa");
+        dataSource.setUsername("root");
         dataSource.setPassword("");
         return dataSource;
     }
