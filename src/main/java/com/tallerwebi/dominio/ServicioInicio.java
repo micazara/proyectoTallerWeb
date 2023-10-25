@@ -3,5 +3,7 @@ package com.tallerwebi.dominio;
 public interface ServicioInicio {
 	
 	void instanciarNiveles();
-	void guardarPregunta(Pregunta pregunta);
+	void instanciarPreguntasFaseUno();
+	void instanciarPreguntasFaseDos();
+	void instanciarPreguntasFaseTres();
 }

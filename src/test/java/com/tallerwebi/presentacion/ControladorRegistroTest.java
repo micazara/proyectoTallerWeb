@@ -13,7 +13,7 @@ public class ControladorRegistroTest {
     // los metodos q pruebo aca estan en el controlador registro
 
     // es una clase
-    ControladorRegistro controladorRegistro = new ControladorRegistro();
+    ControladorRegistro controladorRegistro = new ControladorRegistro(null);
 
     @Test
     public void siIngresoEmailYClaveSeRegistraCorrectamente() {
@@ -92,7 +92,7 @@ public class ControladorRegistroTest {
 
     }
 
-    private ModelAndView whenRegistroUsuario(String email) {
+   private ModelAndView whenRegistroUsuario(String email) {
 
         // devuelve model and view. Recuro el mv que duelve el controlador
         ModelAndView mav = controladorRegistro.registrar(email);
