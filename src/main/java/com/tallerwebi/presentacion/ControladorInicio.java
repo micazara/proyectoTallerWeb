@@ -41,12 +41,11 @@ public class ControladorInicio {
 
 	}
 
-	@RequestMapping(path = "/guardarPregunta", method = RequestMethod.POST)
+	@RequestMapping(path = "/cargarOpciones", method = RequestMethod.POST)
 	public ModelAndView guardarPregunta(@ModelAttribute("pregunta") Pregunta pregunta) {
 		ModelMap model = new ModelMap();
-		servicioInicio.guardarPregunta(pregunta);
-
-		return new ModelAndView("redirect:/cargar-pregunta");
+		model.addAttribute("pregunta", pregunta);
+		return new ModelAndView("cargar-opciones",model);
 	}
 
 }

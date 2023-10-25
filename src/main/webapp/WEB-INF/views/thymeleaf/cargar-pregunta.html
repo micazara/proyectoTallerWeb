@@ -25,14 +25,16 @@
 
 
 		<h2>ARMA TU PREGUNTA</h2>
-		<form action="#" th:action="@{/guardarPregunta}" method="POST"
+
+		<form action="#" th:action="@{/cargarOpciones}" method="POST"
 			th:object="${pregunta}">
+
 			<!--INPUT PARA INGRESAR LA PREGUNTA-->
 			<label for="descripcion">Ingresa tu pregunta <input
 				th:field="*{descripcion}" id="descripcion" required
 				placeholder="¿De qué color era el caballo blanco de San Martin?" />
-			</label>
-			<!--SELECCIONE LAS PREGUNTAS-->
+			</label> <br>
+			<!--SELECCIONE EL NIVEL AL QUE CORRESPONDE-->
 			<label for="nivel"> <select th:field="*{nivel}" id="nivel"
 				required>
 					<option value="">Selecciona un nivel</option>
@@ -40,26 +42,28 @@
 						th:each="provincia : ${T(com.tallerwebi.dominio.Nivel).values()}"
 						th:value="${provincia}" th:text="${provincia}"></option>
 			</select>
-			</label>
+			</label> <br>
 			<!--SELECCIONAR FASE-->
 			<label for="fase">¿Para qué fase es tu pregunta? <select
-				th:field="*{fase}" id="fase" required>
+				th:field="*{fase}" id="fase" name="fase" required >
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
 			</select>
-			</label>
+			</label> <br>
+
+
 			<!--ENVIAR FORM-->
 			<div>
-				<button class="boton" Type="Submit">Enviar mi pregunta</button>
+				<button class="boton" Type="Submit">continuar</button>
 			</div>
 			<p th:if="${error != null}" class="mensaje_error"
 				th:text="'Error ' + ${error}"></p>
 
 		</form>
 
-		</div>
-		<a th:href="@{/home}" class="boton_de_volver">Volver</a>
+		<div>
+			<a th:href="@{/inicio}" class="boton_de_volver">Volver</a>
 		</div>
 	</main>
 
