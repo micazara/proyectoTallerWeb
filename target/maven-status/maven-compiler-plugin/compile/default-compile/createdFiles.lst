@@ -2,8 +2,6 @@ com\tallerwebi\dominio\RepositorioNivel.class
 com\tallerwebi\dominio\Partida.class
 com\tallerwebi\dominio\Nivel.class
 com\tallerwebi\dominio\ServicioPreguntas.class
-com\tallerwebi\dominio\ServicioUsuarioImpl.class
-com\tallerwebi\dominio\SerivicoInicioImpl.class
 com\tallerwebi\infraestructura\RepositorioNivelIml.class
 com\tallerwebi\dominio\excepcion\CampoVacio.class
 com\tallerwebi\dominio\ServicioUsuario.class

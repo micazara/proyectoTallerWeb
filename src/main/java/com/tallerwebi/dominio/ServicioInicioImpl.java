@@ -7,54 +7,62 @@ import org.springframework.stereotype.Service;
 
 @Service("servicioInicio")
 @Transactional
-public class SerivicoInicioImpl implements ServicioInicio {
+public class ServicioInicioImpl implements ServicioInicio {
 
 	private RepositorioNivel servicioNivel;
 
 	@Autowired
-	public SerivicoInicioImpl(RepositorioNivel servicioNivel) {
+	public ServicioInicioImpl(RepositorioNivel servicioNivel) {
 		this.servicioNivel = servicioNivel;
 	}
 
 	@Override
 	public void instanciarNiveles() {
 		// PRIMERO CREAMOS EL NIVEL UNO
-		Nivel tierraDelFuego = new Nivel();
+		Nivel tierraDelFuego = Nivel.Tierra_del_Fuego;
 		// EMPEZAMOS A CARGARLE LA DATA
 		tierraDelFuego.setId(1);
 		tierraDelFuego.setNombre("Tierra del Fuego");
 		// GUARDO EL NIVEL
 		servicioNivel.guardarNivel(tierraDelFuego);
 		// Y ASI CON TODAS
-		Nivel santaCruz = new Nivel();
+		
+		Nivel santaCruz = Nivel.Santa_Cruz;
 		santaCruz.setId(2);
 		santaCruz.setNombre("Santa Cruz");
 		servicioNivel.guardarNivel(santaCruz);
-		Nivel chubut = new Nivel();
+		
+		Nivel chubut = Nivel.Chubut;
 		chubut.setId(3);
 		chubut.setNombre("Chubut");
 		servicioNivel.guardarNivel(chubut);
-		Nivel rioNegro = new Nivel();
+		
+		Nivel rioNegro = Nivel.Rio_Negro;
 		rioNegro.setId(4);
 		rioNegro.setNombre("Rio Negro");
 		servicioNivel.guardarNivel(rioNegro);
-		Nivel laPampa = new Nivel();
+		
+		Nivel laPampa = Nivel.La_Pampa;
 		laPampa.setId(5);
 		laPampa.setNombre("La Pampa");
 		servicioNivel.guardarNivel(laPampa);
-		Nivel neuquen = new Nivel();
+		
+		Nivel neuquen = Nivel.Neuquen;
 		neuquen.setId(6);
 		neuquen.setNombre("Neuquen");
 		servicioNivel.guardarNivel(neuquen);
-		Nivel mendoza = new Nivel();
+		
+		Nivel mendoza = Nivel.Mendoza;
 		mendoza.setId(7);
 		mendoza.setNombre("Mendoza");
 		servicioNivel.guardarNivel(rioNegro);
-		Nivel bsas = new Nivel();
+		
+		Nivel bsas = Nivel.Buenos_Aires;
 		bsas.setId(8);
-		bsas.setNombre("Bueos Aires");
+		bsas.setNombre("Buenos Aires");
 		servicioNivel.guardarNivel(bsas);
-		Nivel caba = new Nivel();
+		
+		Nivel caba = Nivel.CABA;
 		caba.setId(9);
 		caba.setNombre("CABA");
 		servicioNivel.guardarNivel(caba);

@@ -48,7 +48,7 @@ public class ControladorLogin {
         ModelMap model = new ModelMap();
 
         if(datosLogin.getEmail().equals("admin@juego.com") && datosLogin.getPassword().equals("pajaroPanzon34")) {
-            return new ModelAndView("adminstrar",model);
+            return new ModelAndView("administrar",model);
         }
         
         Usuario usuarioBuscado = servicioLogin.consultarUsuario(datosLogin.getEmail(), datosLogin.getPassword());

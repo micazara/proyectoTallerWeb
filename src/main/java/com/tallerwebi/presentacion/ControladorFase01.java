@@ -9,39 +9,38 @@ import org.springframework.web.servlet.ModelAndView;
 //FASE 01- PREGUNTAS DE APROX
 @Controller
 public class ControladorFase01 {
-    //CONTADOR DE TIEMPO
-    private int contador = 0;
-    
-    
-    @RequestMapping(path = "/fase1")
-    public ModelAndView fase01() {
+	// CONTADOR DE TIEMPO
+	private int contador = 0;
+
+	@RequestMapping(path = "/fase1")
+	public ModelAndView fase01() {
 // de la partida obtengo el nivel y de ahi las preguntas
-        return new ModelAndView("fase1");
-    }
-    
-    @RequestMapping(path = "/contador", method = RequestMethod.GET)
-    public ModelAndView mostrarContador() {
-        ModelAndView modelAndView = new ModelAndView("fase1");
-        modelAndView.addObject("contador", contador);
-        return modelAndView;
-    }
+		return new ModelAndView("fase1");
+	}
 
-    // Iniciar el contador cuando se accede a /fase1
-    @RequestMapping(path = "/fase1", method = RequestMethod.GET)
-    public ModelAndView iniciarContador() {
-        contador = 0; // Reiniciar el contador
-        return new ModelAndView("redirect:/contador");
-    }
+	@RequestMapping(path = "/contador", method = RequestMethod.GET)
+	public ModelAndView mostrarContador() {
+		ModelAndView modelAndView = new ModelAndView("fase1");
+		modelAndView.addObject("contador", contador);
+		return modelAndView;
+	}
 
-    // Incrementar el contador cada segundo (1000 ms)
-    @Scheduled(fixedRate = 1000)
-    public void incrementarContador() {
-        contador++;
-    }
+	// Iniciar el contador cuando se accede a /fase1
+	@RequestMapping(path = "/fase1", method = RequestMethod.GET)
+	public ModelAndView iniciarContador() {
+		contador = 0; // Reiniciar el contador
+		return new ModelAndView("redirect:/contador");
+	}
 
-    // Detener el contador después de 30 segundos (30000 ms)
-    @Scheduled(fixedRate = 30000)
-    public void detenerContador() {
-        contador = 0; // Reiniciar el contador
-    }
+	// Incrementar el contador cada segundo (1000 ms)
+	@Scheduled(fixedRate = 1000)
+	public void incrementarContador() {
+		contador++;
+	}
+
+	// Detener el contador después de 30 segundos (30000 ms)
+	@Scheduled(fixedRate = 30000)
+	public void detenerContador() {
+		contador = 0; // Reiniciar el contador
+	}
 }
