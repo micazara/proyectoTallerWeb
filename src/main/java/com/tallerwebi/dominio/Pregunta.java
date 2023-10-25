@@ -16,9 +16,8 @@ public class Pregunta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String descripcion;
-    private Nivel nivel;
+    private Integer provincia;
     private Integer  fase;
-    
     
     
 
@@ -38,13 +37,12 @@ public class Pregunta {
         this.descripcion = descripcion;
     }
 
-
-	public Nivel getNivel() {
-		return nivel;
+	public Integer getProvincia() {
+		return provincia;
 	}
 
-	public void setNivel(Nivel nivel) {
-		this.nivel = nivel;
+	public void setProvincia(Integer provincia) {
+		this.provincia = provincia;
 	}
 
 	public Integer getFase() {

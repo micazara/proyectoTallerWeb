@@ -1,5 +1,7 @@
 package com.tallerwebi.presentacion;
 
+import com.tallerwebi.dominio.Pregunta;
+import com.tallerwebi.dominio.Respuesta;
 import com.tallerwebi.dominio.ServicioLogin;
 import com.tallerwebi.dominio.Usuario;
 import com.tallerwebi.dominio.excepcion.UsuarioExistente;
@@ -45,11 +47,14 @@ public class ControladorLogin {
     public ModelAndView validarLogin(@ModelAttribute("datosLogin") DatosLogin datosLogin, HttpServletRequest request) {
         ModelMap model = new ModelMap();
 
+        if(datosLogin.getEmail().equals("admin@juego.com") && datosLogin.getPassword().equals("pajaroPanzon34")) {
+            return new ModelAndView("adminstrar",model);
+        }
+        
         Usuario usuarioBuscado = servicioLogin.consultarUsuario(datosLogin.getEmail(), datosLogin.getPassword());
         if (usuarioBuscado != null) {
             request.getSession().setAttribute("ROL", usuarioBuscado.getRol());
-            ModelMap modeloNivel = actualizarNivel(usuarioBuscado);
-            return new ModelAndView("inicio",modeloNivel);
+            return new ModelAndView("inicio",model);
         } else {
             model.put("error", "Usuario o clave incorrecta");
         }
@@ -90,15 +95,22 @@ public class ControladorLogin {
         return new ModelAndView("redirect:/home");
     }
     // "/" es la raiz
-
-
-    @GetMapping("/inicio")
-    public ModelMap actualizarNivel(Usuario usuario) {
-        ModelMap model = new ModelMap();
-
-        model.addAttribute("nivelActual", servicioLogin.consultarNivelActual(usuario));
-        // Retorna la vista que utilizará Thymeleaf
-        return model;
+    
+    @RequestMapping("/cargarPregunta")
+    public ModelAndView irACargarPregunta() {
+        ModelMap modelo = new ModelMap();
+        modelo.addAttribute("pregunta", new Pregunta());
+        return new ModelAndView("cargar-preguntas", modelo);
     }
+    
+    @RequestMapping("/cargarOpciones")
+    public ModelAndView irACargarOpciones() {
+        ModelMap modelo = new ModelMap();
+        modelo.addAttribute("respuesta", new Respuesta());
+        return new ModelAndView("cargar-opciones", modelo);
+    }
+    
+    
+
 }
 

@@ -1,12 +1,23 @@
 package com.tallerwebi.presentacion;
 
+import com.tallerwebi.dominio.ServicioUsuario;
+import com.tallerwebi.dominio.Usuario;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class ControladorRegistro {
+    private ServicioUsuario servicioUsuario;
+    @Autowired
+    public ControladorRegistro(ServicioUsuario servicioUsuario) {
+        this.servicioUsuario = servicioUsuario;
+    }
+
     public ModelAndView registrar(String email) {
         ModelMap modelo = new ModelMap();
         String nombreVista = "registro";
@@ -51,11 +62,31 @@ public class ControladorRegistro {
         return contieneMayusculas;
     }
 
-    @RequestMapping(path = "/registrarse")
+    @RequestMapping(path = "/registrarse", method = RequestMethod.GET)
     public ModelAndView irARegistrarse() {
         ModelMap modelo = new ModelMap();
         modelo.put("datosRegistro", new DatosRegistro());
         return new ModelAndView("registrarse", modelo);
+    }
+
+    @RequestMapping(path = "/registrarse", method = RequestMethod.POST)
+    public ModelAndView validarRegistro(@ModelAttribute("datosRegistro") DatosRegistro datosRegistro) {
+        Usuario usuario = servicioUsuario.buscarUsuarioPorEmail(datosRegistro.getEmail());
+        ModelMap modelo = new ModelMap();
+
+        if(usuario != null){
+            modelo.put("error", "El email ya se encuentra registrado");
+            return new ModelAndView("registrarse", modelo);
+        }
+
+        if(!datosRegistro.getPassword().equals(datosRegistro.getPasswordRepetida())){
+            modelo.put("error", "Las contraseñas no coinciden");
+            return new ModelAndView("registrarse", modelo);
+        }
+
+        servicioUsuario.registrarUsuario(datosRegistro);
+        modelo.put("registroExitoso", "Registro Exitoso");
+        return new ModelAndView("home", modelo);
     }
 
 }
